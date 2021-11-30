@@ -1,0 +1,741 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: rgb(63, 63, 63);
+    display: grid;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 25px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+.navbar.change{
+    padding: 8px 0;
+    background: crimson;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.max-width{
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+.navbar .logo a{
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    
+}
+
+.navbar .logo a span{
+    color:crimson;
+    text-shadow: 0px 0px 2px white;
+}
+
+.navbar.change .logo a span{
+    color: white;
+}
+
+.navbar .menu li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease-in;
+}
+
+.navbar .menu li a:hover{
+    color:crimson;
+    text-shadow: 0px 0px 4px black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.menu{
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide_container{
+    width:1920px;
+    height: 700px;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+}
+
+.slide_container .slides{
+    display: flex;
+    width: 500%;
+    height: 1080px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide_container .slides .slide{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+
+.slide_container .navbars{
+    display: flex;
+    position: absolute;
+    width: 1920px;
+    top: 650px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.slide_container .navbars label{
+    width:15px;
+    height: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px white;
+}
+
+.slide_container .navbars label:hover{
+    cursor: pointer;
+    background-color: crimson;
+    width:18px;
+    height: 18px;
+    box-shadow: 0px 0px 10px crimson ;
+}
+
+#r1:checked~.s1{
+    margin-left: 0;
+}
+#r2:checked~.s1{
+    margin-left: -40%;
+}
+#r3:checked~.s1{
+    margin-left: -80%;
+}
+#r4:checked~.s1{
+    margin-left: -120%;
+}
+#r5:checked~.s1{
+    margin-left: -160%;
+}
+
+.details{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1920px;
+    height: 1100px;
+    background-color: rgb(233, 233, 233);
+}
+
+.headline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 50%;
+    padding: 200px 0;
+    color: white; 
+    background-color: white;
+    margin-top: 80px;
+    border-radius: 100px;
+    margin: 80px 500px;
+}
+
+.headline label{
+    font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black;
+}
+
+.headline label span{
+    text-shadow: none;
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0;
+    height: 300px;
+}
+
+.intro .information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 40%;
+    color: white;
+    line-height: 65px;
+    font-size: 20px;
+    border-radius: 100px;
+    padding-left: 40px;
+    padding-right: 20px;
+    font-family:'Ubuntu', sans-serif;
+    text-shadow: 0px 0px 5px black;
+    background-color: crimson;
+}
+
+.intro .Gif_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 200px;
+    width:16%;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px black;
+}
+
+.intro .Gif_image img{
+    height: 100%;
+}
+
+.intro .Gif_image img:hover{
+    cursor: pointer;
+}
+
+.details1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1920px;
+    height: 500px;
+    background-color: white;
+}
+
+.d1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 15%;
+    height: 90%;
+}
+.d1 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    background-color: crimson;
+    border-radius: 100px;
+    width: 40%;
+    height: 83%;
+    margin: 0 90px;
+    box-shadow: 0px 0px 10px black;
+}
+.d1 .info1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 40px;
+    font-size: 17px;
+}
+.d1 .info1 span{
+    font-size: 25px;
+}
+
+.d1 a input{
+    border: none;
+    background-color: crimson;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    transition: 0.3s ease-in-out;
+}
+.d1 a input:hover{
+    background-color: white;
+    color: crimson;
+    cursor: pointer;
+}
+
+.d2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 90%;
+}
+.d2 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    background-color: crimson;
+    border-radius: 100px;
+    width: 39%;
+    height: 86%;
+    margin: 0 90px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.d2 .info2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 40px;
+    font-size: 17px;
+}
+.d2 .info2 span{
+    font-size: 25px;
+}
+
+.d2 a input{
+    border: none;
+    background-color: crimson;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    transition: 0.3s ease-in-out;
+}
+.d2 a input:hover{
+    background-color: white;
+    color: crimson;
+    cursor: pointer;
+}
+
+.d3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 90%;
+}
+.d3 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    background-color: crimson;
+    border-radius: 100px;
+    width: 38%;
+    height: 86%;
+    margin: 0 90px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.d3 .info3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 60px;
+    font-size: 17px;
+}
+.d3 .info3 span{
+    font-size: 25px;
+}
+
+.d3 a input{
+    border: none;
+    background-color: crimson;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    transition: 0.3s ease-in-out;
+}
+.d3 a input:hover{
+    background-color: white;
+    color: crimson;
+    cursor: pointer;
+}
+
+.d4{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 90%;
+}
+.d4 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    background-color: crimson;
+    border-radius: 100px;
+    width: 38%;
+    height: 83%;
+    margin: 0 90px;
+    box-shadow: 0px 0px 10px black;
+}
+.d4 .info4{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 45px;
+    font-size: 17px;
+}
+.d4 .info4 span{
+    font-size: 25px;
+}
+
+.d4 a input{
+    border: none;
+    background-color: crimson;
+    color: white;
+    height: 30px;
+    width: 90px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
+    transition: 0.3s ease-in-out;
+}
+.d4 a input:hover{
+    background-color: white;
+    color: crimson;
+    cursor: pointer;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background-color: crimson;
+    width:100%;
+    transition: 0.3s ease-in-out;
+}
+
+.login label{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.login input{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+.login button{
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    margin-left: 30px;
+    color: crimson;
+    font-size: 20px;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+}
+.login button:hover{
+    width: 154px;
+    height: 42px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+
+.prjct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(233, 233, 233);
+    height: 200px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+}
+
+.projects{
+    display: flex;
+    justify-content: space-evenly;
+    height: 1000px;
+    background-color: white;
+    padding:100px 0;
+}
+
+.pp{
+    display: grid;
+    background-color: white;
+    width: 430px;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.pp .imgg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 430px;
+    background-color: red;
+    overflow: hidden;
+    height: 430px;
+    border-radius: 20px;
+}
+
+.pp .imgg img{
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.pp .imgg img:hover{
+    height: 110%;
+    cursor: pointer;
+}
+
+.pp .btn{
+    align-items: center;
+    width: 100%;
+}
+
+.pp .btn input{
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+    color: crimson;
+    box-shadow: 0px 0px 4px black;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    transition: 0.3s ease-in-out;
+    margin: 30px 40px;
+}
+
+.pp .btn input:hover{
+    color: white;
+    background-color: crimson;
+    cursor: pointer;
+}
+
+.pp .text1{
+    font-size: 20px;
+    padding: 30px 40px;
+}
+
+.pp .text1 span{
+    font-size: 40px;
+}
+.pp .text2{
+    font-size: 20px;
+    padding-bottom: 40px;
+    padding: 30px 40px;
+}
+
+.pp .text2 span{
+    font-size: 40px;
+}
+.pp .text3{
+    font-size: 20px;
+    padding: 30px 40px;
+}
+
+.pp .text3 span{
+    font-size: 40px;
+}
+.pp .text4{
+    font-size: 20px;
+    padding: 30px 40px;
+}
+
+.pp .text4 span{
+    font-size: 40px;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(233, 233, 233);
+    height: 200px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+}
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 280px;
+    background-color: white;
+}
+
+.price_table{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(233, 233, 233);
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pt{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 32.50%;
+    color: rgb(143, 143, 143);
+    font-size: 18px;
+    padding-top: 10px;
+}
+.plan_label{
+    display: grid;
+    justify-content: center;
+}
+
+.pt .plan_label label span{
+    color: crimson;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pt .plan_label label span span{
+    font-weight: lighter;
+    font-size: 18px;
+    align-items: center;
+    text-align: center;
+}
+
+.pt .btn input{
+    color: white;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px black;
+    background-color: crimson;
+    width: 40px;
+    height: 25px;
+    transition: 0.3s ease-in-out;
+}
+.pt .btn input:hover{
+    background-color: white;
+    color: crimson;
+    cursor: pointer;
+}
+
+.blank{
+    background-color: rgb(233, 233, 233);
+    width: 100%;
+    height: 100px;
+}
+
+.contact_info{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: crimson;
+    height: 600px;
+}
+.contact_info .map iframe{
+    width: 600px;
+    height: 600px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact_info .contact{
+    width: 700px;
+    height: 600px;
+    padding-top: 40px;
+}
+
+.contact_info .contact label span{
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+}
+
+.contact_info .contact label{
+    color: white;
+}
+.contact_info .contact input{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 300px;
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+.contact_info .contact textarea{
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 300px;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+
+.contact_info .contact button{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    }
+.contact_info .contact button:hover{
+    color: white;
+    background-color: crimson;
+    box-shadow:0px 0px 5px white;
+    cursor: pointer;
+}
